@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListNotes: View {
-    var notes: [Note] = [Note(title: "Hey!"),
+    @State var notes: [Note] = [Note(title: "Hey!"),
                          Note(title: "This is a note"),
                          Note(title: "Day to day")]
     var body: some View {
@@ -22,6 +22,15 @@ struct ListNotes: View {
                     }
                 )
             }
+            .onDelete { indexSet in
+                delete(offsets: indexSet)
+            }
+        }
+    }
+    
+    func delete(offsets: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offsets)
         }
     }
 }
