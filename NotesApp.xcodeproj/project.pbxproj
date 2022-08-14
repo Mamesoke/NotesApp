@@ -23,6 +23,7 @@
 		5D30C0B5289C5717005A9D9F /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D30C0B4289C5717005A9D9F /* DateExtensions.swift */; };
 		5D30C0B7289C5806005A9D9F /* ListNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D30C0B6289C5806005A9D9F /* ListNotes.swift */; };
 		5D30C0B9289C598C005A9D9F /* DetailNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D30C0B8289C598C005A9D9F /* DetailNote.swift */; };
+		5D7FDCD428A90042009934DF /* StorageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FDCD328A90042009934DF /* StorageTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		5D30C0B4289C5717005A9D9F /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		5D30C0B6289C5806005A9D9F /* ListNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotes.swift; sourceTree = "<group>"; };
 		5D30C0B8289C598C005A9D9F /* DetailNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNote.swift; sourceTree = "<group>"; };
+		5D7FDCD328A90042009934DF /* StorageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		5D30C0B1289C5445005A9D9F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5D7FDCD528A90045009934DF /* Shared */,
 				5D30C0AF289C5425005A9D9F /* Note.swift */,
 				5D30C0B2289C550E005A9D9F /* AddNote.swift */,
 				5D30C0B4289C5717005A9D9F /* DateExtensions.swift */,
@@ -209,6 +212,14 @@
 				5D30C0B8289C598C005A9D9F /* DetailNote.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		5D7FDCD528A90045009934DF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5D7FDCD328A90042009934DF /* StorageTools.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +411,7 @@
 			files = (
 				5D30C0B7289C5806005A9D9F /* ListNotes.swift in Sources */,
 				5D30C0B3289C550E005A9D9F /* AddNote.swift in Sources */,
+				5D7FDCD428A90042009934DF /* StorageTools.swift in Sources */,
 				5D30C07B289C51FF005A9D9F /* ContentView.swift in Sources */,
 				5D30C07D289C51FF005A9D9F /* NotesAppApp.swift in Sources */,
 				5D30C0B9289C598C005A9D9F /* DetailNote.swift in Sources */,
@@ -569,14 +581,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesApp WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 9463G4D4A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NotesApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "NotesApp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = NotesApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -584,7 +596,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mamesoke.NotesApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -601,14 +613,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesApp WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 9463G4D4A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NotesApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "NotesApp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = NotesApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -616,7 +628,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mamesoke.NotesApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -635,13 +647,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9463G4D4A3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = NotesApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "NotesApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mamesoke.NotesApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -660,13 +672,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9463G4D4A3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = NotesApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "NotesApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mamesoke.NotesApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -682,9 +694,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9463G4D4A3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mamesoke.NotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -695,9 +707,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9463G4D4A3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mamesoke.NotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
