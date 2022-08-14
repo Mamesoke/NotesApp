@@ -10,6 +10,8 @@ import SwiftUI
 struct AddNote: View {
     @State private var notes = [Note]()
     @State private var text = ""
+    @Environment(\.presentationMode) var presentation
+    
     var body: some View {
         VStack{
             TextField("nota", text: $text)
@@ -17,11 +19,19 @@ struct AddNote: View {
                 guard !text.isEmpty else { return }
                 let note = Note(title: text)
                 notes.append(note)
+                StorageTools.shared.save(notes)
                 text = ""
+                presentation.wrappedValue.dismiss()
             }
+        }.onAppear {
+            notes = load()
         }
     }
     
+    func load() -> [Note] {
+        guard let notes = StorageTools.shared.load() else { return [] }
+        return notes
+    }
     
 }
 
