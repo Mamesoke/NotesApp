@@ -12,7 +12,7 @@ struct ContentView: View {
         VStack{
             NavigationLink("Agregar nota", destination: AddNote())
             NavigationLink("Listar notas", destination: ListNotes())
-        }
+        }.navigationTitle("Notes App")
     }
 }
 

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Note: Identifiable {
+struct Note: Identifiable, Codable {
     var id: UUID
     
     var title: String
