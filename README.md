@@ -5,8 +5,8 @@ A standalone **Apple Watch** notes app built with **SwiftUI** in **2022**. It le
 
 <p align="center">
   <img src="images/home.png" alt="Home screen with buttons Add note / List notes" width="240" />
-  <img src="images/new_note.png.png" alt="Add Note screen with a text field" width="240" />
-  <img src="images/read_note.png.png" alt="Note detail showing timestamp" width="240" />
+  <img src="images/new_note.png" alt="Add Note screen with a text field" width="240" />
+  <img src="images/read_note.png" alt="Note detail showing timestamp" width="240" />
 </p>
 
 ---
